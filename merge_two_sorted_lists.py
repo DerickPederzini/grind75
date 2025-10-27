@@ -22,5 +22,5 @@ class Solution:
 
 
 
-
-Solution.mergeTwoLists([1,2,4], [1,3,4])
+s = Solution()
+s.mergeTwoLists([1,2,4], [1,3,4])
