@@ -10,17 +10,28 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
+        headA = ListNode()
+        tailA = headA
 
-            s = Solution()
-            ln = ListNode()
-            ln2 = ListNode()
+        while list1 is not None and list2 is not None:
+            if list1.val >= list2.val:
+                tailA.next = list1
+                list1 = list1.next
+                tailA = tailA.next
+            else:
+                tailA.next = list2
+                list2 = list2.next
+                tailA = tailA.next
 
-            for i in range(3):
-                ln.val = i + 1
-                if i != 0:
-                    ln.next
+        tailA.next = list2 if list1 is None else list1
 
-
+        return headA
 
 s = Solution()
-s.mergeTwoLists([1,2,4], [1,3,4])
+
+l1 = ListNode()
+l2 = ListNode()
+
+
+
+s.mergeTwoLists(l1, l2)

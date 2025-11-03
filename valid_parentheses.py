@@ -12,15 +12,15 @@ class Solution:
         stack = []
 
         for i in range(len(s)):
-            if s[i] not in stack:
+            if s[i] not in hash.keys():
                 stack.append(s[i])
-            elif stack.pop() != hash[s[i]] or stack.count == 0:
+            elif  len(stack) == 0 or stack.pop() != hash[s[i]] :
                 return False
 
-        return True
+        return len(stack) == 0
 
 
 
 s = Solution()
 
-print(s.isValid("())"))
+print(s.isValid(")"))
